@@ -1,0 +1,1584 @@
+/* ==================== FUENTES ==================== */
+
+/* Nulkshock: títulos. Montserrat: texto general y subtítulos. */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+@font-face {
+
+    font-family: "Nulkshock";
+
+    src: url("../assets/tipografy/Nulshock Bd.otf") format("opentype");
+
+}
+
+
+/* ==================== COLORES ==================== */
+
+:root {
+
+    --fondo: #070707;
+    --oscuro: #202223;
+    --tarjeta: #162A3D;
+    --detalle: #3F3F3F;
+    --blanco: #FFFFFF;
+    --dorado: #DAA520;
+    --celeste: #3EDBFF;
+    --azul: #203A59;
+    --radio: 18px;
+
+}
+
+
+/* ==================== RESET Y BASE DEL SITIO ==================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-width: 320px;
+
+    overflow-x: hidden;
+
+    color: var(--blanco);
+    background: var(--fondo);
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.75;
+
+}
+
+
+body::before {
+
+    content: '';
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.9;
+
+    background:
+        radial-gradient(
+            var(--detalle) 0.9px,
+            transparent 1.5px
+        ) 0 0 / 32px 32px;
+
+}
+
+
+/* ==================== IMÁGENES Y ENLACES ==================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* ==================== NAVEGACIÓN ==================== */
+
+.navegacion {
+
+    min-height: 3rem;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.2rem;
+
+    padding: 0.15rem max(5vw, 24px);
+
+    border-bottom: 1px solid var(--detalle);
+
+    background: #070707;
+
+}
+
+
+.logo {
+
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.logo:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================== TÍTULO DE LA NAVEGACIÓN ==================== */
+
+.navegacion h1,
+.navegacion .titulo-navbar {
+
+    margin: 0 auto 0 0;
+
+    color: var(--blanco);
+
+    font-family: 'Nulkshock', 'Montserrat', Arial, sans-serif;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.navegacion .titulo-navbar:hover {
+
+    color: var(--dorado);
+
+    transition: 0.3s ease;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==================== NAVEGACIÓN - BOOTSTRAP ==================== */
+
+/*
+Bootstrap controla .navbar-nav y el menú responsive.
+
+No se modifica la dirección de la lista para no interferir
+con el menú hamburguesa.
+*/
+
+.navegacion .navbar-nav {
+
+    gap: 0.35rem;
+
+}
+
+
+.navegacion .nav-link {
+
+    display: block;
+
+    padding: 0.6rem 0.75rem !important;
+
+    border-radius: 10px;
+
+    color: var(--blanco) !important;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+.navegacion .nav-link:hover {
+
+    color: var(--dorado) !important;
+
+    background: var(--detalle);
+
+    transform: translateY(-2px);
+
+}
+
+
+.navegacion .nav-link:focus {
+
+    color: var(--dorado) !important;
+
+    background: var(--detalle);
+
+    outline: 2px solid var(--dorado);
+
+    outline-offset: 2px;
+
+}
+
+
+.navegacion .nav-link:active {
+
+    color: var(--dorado) !important;
+
+    transform: translateY(0);
+
+}
+
+
+.navegacion .nav-link.active {
+
+    color: var(--dorado) !important;
+
+}
+
+
+/* ==================== BOTÓN HAMBURGUESA ==================== */
+
+.navegacion .navbar-toggler {
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--detalle);
+
+    border-radius: 10px;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+.navegacion .navbar-toggler:hover {
+
+    border-color: var(--dorado);
+
+    background: var(--detalle);
+
+}
+
+
+.navegacion .navbar-toggler:focus {
+
+    box-shadow:
+        0 0 0 3px rgba(62, 219, 255, 0.15);
+
+}
+
+
+.navegacion .navbar-toggler:active {
+
+    transform: scale(0.95);
+
+}
+
+
+/* ==================== LISTAS ==================== */
+
+/*
+El navbar-nav queda bajo control de Bootstrap.
+
+Esta regla solamente afecta las listas que no sean
+la lista principal de navegación.
+*/
+
+.contacto ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.35rem;
+
+    list-style: none;
+
+}
+
+
+/* ==================== ESTRUCTURA GENERAL ==================== */
+
+main {
+
+    width: calc(100% - 32px);
+
+    margin: 0 auto;
+
+}
+
+
+section {
+
+    position: relative;
+
+    padding: 62px 0;
+
+    border-bottom: 1px solid var(--detalle);
+
+}
+
+
+section h1,
+section h2,
+section h3 {
+
+    margin-bottom: 1rem;
+
+    font-family: 'Nulkshock', 'Montserrat', Arial, sans-serif;
+
+    font-weight: 700;
+
+    line-height: 1.22;
+
+}
+
+
+section h1 {
+
+    color: var(--blanco);
+
+    font-size: clamp(2.25rem, 6vw, 5rem);
+
+}
+
+
+section h2 {
+
+    color: var(--blanco);
+
+    font-size: clamp(1.5rem, 3.5vw, 2.65rem);
+
+}
+
+
+section h3 {
+
+    font-size: 1.05rem;
+
+}
+
+
+section p {
+
+    max-width: 720px;
+
+    margin-bottom: 1rem;
+
+}
+
+
+section ul {
+
+    display: grid;
+
+    gap: 0.75rem;
+
+    margin: 1.35rem 0 0;
+
+    list-style: none;
+
+}
+
+
+section li {
+
+    position: relative;
+
+    padding-left: 1.35rem;
+
+}
+
+
+section li::before {
+
+    content: '◆';
+
+    position: absolute;
+
+    left: 0;
+    top: 0.15rem;
+
+    color: var(--dorado);
+
+    font-size: 0.64rem;
+
+}
+
+
+/* ==================== PORTADAS ==================== */
+
+.introduccion,
+.presentacion,
+.introduccion-avances,
+.introduccion-comunidad,
+.introduccion-contacto {
+
+    min-height: 440px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    align-content: center;
+
+    gap: 0.3rem;
+
+    border: 0;
+
+}
+
+
+/* ==================== PORTADA DE INICIO ==================== */
+
+.introduccion {
+
+    width: 100vw;
+
+    min-height: calc(100svh - 84px);
+
+    margin-left: calc(50% - 50vw);
+
+    padding:
+        0
+        20px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            var(--fondo) 100%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(42, 44, 45, 0.86),
+            rgba(42, 44, 45, 0.55) 55%,
+            rgba(42, 44, 45, 0.25)
+        ),
+
+        url('../assets/img/index.png')
+        center / cover no-repeat;
+
+}
+
+
+/* ==================== PORTADA DE LA BASE ==================== */
+
+.presentacion {
+
+    padding: 2rem;
+
+    border-radius: var(--radio);
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            var(--fondo) 100%
+        ),
+
+        url('../assets/img/avances.png')
+        center / cover no-repeat;
+
+}
+
+
+/* ==================== BOTONES ==================== */
+
+.introduccion > a,
+.equipo article a,
+.avances article a {
+
+    width: fit-content;
+
+    padding: 0.85rem 1.2rem;
+
+    border: 1px solid var(--dorado);
+
+    border-radius: 12px;
+
+    color: var(--oscuro);
+
+    background: var(--dorado);
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+.introduccion > a:hover,
+.equipo article a:hover,
+.avances article a:hover {
+
+    color: var(--oscuro);
+
+    background: var(--blanco);
+
+    transform: translateY(-2px);
+
+}
+
+
+.introduccion > a:focus,
+.equipo article a:focus,
+.avances article a:focus {
+
+    outline: 2px solid var(--celeste);
+
+    outline-offset: 3px;
+
+}
+
+
+.introduccion > a:active,
+.equipo article a:active,
+.avances article a:active {
+
+    transform: translateY(0);
+
+    background: var(--dorado);
+
+}
+
+
+/* ==================== SECCIONES DESTACADAS ==================== */
+
+.informacion-general,
+.quienes-somos,
+.que-es-cansat,
+.mision,
+.sensorica,
+.estructura,
+.pruebas,
+.recursos,
+.formulario-contacto {
+
+    margin: 1rem 0;
+
+    padding: 1.5rem;
+
+    border-radius: var(--radio);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(63, 63, 63, 0.75),
+            rgba(63, 63, 63, 0.15)
+        );
+
+}
+
+
+/* ==================== TARJETAS ==================== */
+
+.proyecto,
+.etapas,
+.noticias,
+.publicaciones,
+.equipo {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    gap: 1.25rem;
+
+}
+
+
+.proyecto > h2,
+.etapas > h2,
+.noticias > h2,
+.publicaciones > h2,
+.equipo > h2 {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* ==================== GRID DE TARJETAS ==================== */
+
+.proyecto article,
+.etapas article,
+.noticias article,
+.publicaciones article,
+.equipo article,
+.telemetria article,
+.programacion article,
+.foro article,
+.redes article {
+
+    padding: 1.5rem;
+
+    border: 1px solid var(--detalle);
+
+    border-radius: var(--radio);
+
+    background: var(--tarjeta);
+
+    opacity: 0.95;
+
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.22);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.proyecto article:hover,
+.etapas article:hover,
+.noticias article:hover,
+.publicaciones article:hover,
+.equipo article:hover {
+
+    border-color: var(--celeste);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==================== GRID PRINCIPAL ==================== */
+
+/*
+Mobile First:
+
+El título y el contenido se organizan
+en una sola columna.
+
+Desktop:
+
+Se utilizan dos columnas mediante
+grid-template-areas.
+*/
+
+.telemetria,
+.programacion,
+.foro {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+
+        "titulo"
+        "contenido";
+
+    align-items: center;
+
+    gap: 2rem;
+
+}
+
+
+.telemetria h2,
+.programacion h2,
+.foro h2 {
+
+    grid-area: titulo;
+
+    margin: 0;
+
+}
+
+
+.telemetria article,
+.programacion article,
+.foro article {
+
+    grid-area: contenido;
+
+}
+
+
+/* ==================== OBJETIVOS Y RECURSOS ==================== */
+
+.objetivos {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    gap: 1rem;
+
+}
+
+
+.objetivos article,
+.recursos article {
+
+    padding: 1rem;
+
+    border-left: 3px solid var(--dorado);
+
+    border-radius: 0 var(--radio) var(--radio) 0;
+
+    background: var(--detalle);
+
+}
+
+
+/* ==================== IMAGEN DEL EQUIPO ==================== */
+
+.equipo figure {
+
+    overflow: hidden;
+
+    border: 1px solid var(--detalle);
+
+    border-radius: var(--radio);
+
+    background: var(--tarjeta);
+
+}
+
+
+.equipo figure img {
+
+    width: 100%;
+
+    height: 90%;
+
+    object-fit: cover;
+
+}
+
+
+.equipo figcaption {
+
+    padding: 0.7rem 1rem;
+
+    font-size: 0.76rem;
+
+}
+
+
+/* ==================== ARTÍCULO DEL EQUIPO ==================== */
+
+/*
+Evita que el artículo "Conocé más sobre nosotros"
+se estire hasta igualar la altura de la imagen.
+*/
+
+.equipo article {
+
+    align-self: center;
+
+}
+
+
+/* ==================== CONTACTO ==================== */
+
+.redes {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    gap: 1rem;
+
+}
+
+
+.redes a {
+
+    color: var(--dorado);
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.redes a:hover {
+
+    color: var(--celeste);
+
+}
+
+
+.redes a:focus {
+
+    color: var(--celeste);
+
+    outline: 2px solid var(--celeste);
+
+    outline-offset: 3px;
+
+}
+
+
+.redes a:active {
+
+    color: var(--dorado);
+
+}
+
+
+/* ==================== FORMULARIO ==================== */
+
+.formulario-contacto form {
+
+    max-width: 720px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    gap: 1rem;
+
+}
+
+
+.formulario-contacto form div {
+
+    display: grid;
+
+    gap: 0.45rem;
+
+}
+
+
+label {
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 0.85rem 0.95rem;
+
+    border: 1px solid var(--detalle);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    color: var(--blanco);
+
+    background: var(--oscuro);
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: var(--celeste);
+
+    box-shadow:
+        0 0 0 4px rgba(62, 219, 255, 0.13);
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+}
+
+
+/* ==================== CARRUSEL ==================== */
+
+.galeria {
+
+    padding: 62px 0;
+
+}
+
+
+.galeria h2 {
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+#carouselCanSat {
+
+    overflow: hidden;
+
+    border: 1px solid var(--detalle);
+
+    border-radius: var(--radio);
+
+    background: var(--oscuro);
+
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.22);
+
+}
+
+
+#carouselCanSat .carousel-item img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+}
+
+
+/* ==================== CONTROLES DEL CARRUSEL ==================== */
+
+#carouselCanSat .carousel-control-prev,
+#carouselCanSat .carousel-control-next {
+
+    transition:
+        background-color 0.3s ease,
+        opacity 0.3s ease;
+
+}
+
+
+#carouselCanSat .carousel-control-prev:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 11, 11, 0.75),
+            transparent 100%
+        );
+
+    opacity: 0.5;
+
+}
+
+
+#carouselCanSat .carousel-control-next:hover {
+
+    background:
+        linear-gradient(
+            270deg,
+            rgba(11, 11, 11, 0.75),
+            transparent 100%
+        );
+
+    opacity: 0.5;
+
+}
+
+
+#carouselCanSat .carousel-control-prev:focus,
+#carouselCanSat .carousel-control-next:focus {
+
+    outline-offset: -3px;
+
+    opacity: 1;
+
+}
+
+
+#carouselCanSat .carousel-control-prev:active,
+#carouselCanSat .carousel-control-next:active {
+
+    background: rgba(62, 219, 255, 0.15);
+
+}
+
+
+/* ==================== INDICADORES DEL CARRUSEL ==================== */
+
+#carouselCanSat .carousel-indicators button {
+
+    width: 30px;
+
+    height: 3px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: var(--blanco);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+#carouselCanSat .carousel-indicators button:hover {
+
+    transform: scaleY(1.5);
+
+}
+
+
+#carouselCanSat .carousel-indicators button:focus {
+
+    outline: 2px solid var(--celeste);
+
+    outline-offset: 3px;
+
+}
+
+
+#carouselCanSat .carousel-indicators button:active {
+
+    transform: scaleY(1);
+
+}
+
+
+/* ==================== ACCORDION BOOTSTRAP ==================== */
+
+.accordion {
+
+    --bs-accordion-bg: var(--tarjeta);
+
+    --bs-accordion-color: var(--blanco);
+
+    --bs-accordion-border-color: var(--detalle);
+
+    --bs-accordion-btn-color: var(--blanco);
+
+    --bs-accordion-btn-bg: var(--tarjeta);
+
+    --bs-accordion-active-color: var(--celeste);
+
+    --bs-accordion-active-bg: var(--oscuro);
+
+    --bs-accordion-btn-focus-box-shadow:
+        0 0 0 3px rgba(62, 219, 255, 0.15);
+
+}
+
+
+.accordion-item {
+
+    margin-bottom: 0.75rem;
+
+    overflow: hidden;
+
+    border: 1px solid var(--detalle);
+
+    border-radius: var(--radio) !important;
+
+    background: var(--tarjeta);
+
+}
+
+
+.accordion-button {
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+.accordion-button:hover {
+
+    color: var(--dorado);
+
+}
+
+
+.accordion-button:focus {
+
+    color: var(--celeste);
+
+}
+
+
+.accordion-button:not(.collapsed) {
+
+    color: var(--celeste);
+
+    background: var(--oscuro);
+
+}
+
+
+.accordion-button::after {
+
+    filter:
+        brightness(0)
+        invert(1);
+
+}
+
+
+.accordion-body {
+
+    color: var(--blanco);
+
+    background: var(--tarjeta);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==================== CARDS BOOTSTRAP ==================== */
+
+.card {
+
+    border: 1px solid var(--detalle);
+
+    border-radius: var(--radio);
+
+    color: var(--blanco);
+
+    background: var(--tarjeta);
+
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.22);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.card:hover {
+
+    border-color: var(--celeste);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.card:focus-within {
+
+    border-color: var(--celeste);
+
+    box-shadow:
+        0 0 0 3px rgba(62, 219, 255, 0.15);
+
+}
+
+
+.card-body {
+
+    padding: 1.5rem;
+
+}
+
+
+.card-title {
+
+    margin-bottom: 0.75rem;
+
+    color: var(--blanco);
+
+    font-family: 'Nulkshock', 'Montserrat', Arial, sans-serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+}
+
+
+.card-text {
+
+    margin-bottom: 0;
+
+    color: var(--blanco);
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==================== PIE DE PÁGINA ==================== */
+
+.contacto {
+
+    padding: 42px 24px 22px;
+
+    border-top: 1px solid var(--detalle);
+
+    background: var(--oscuro);
+
+    text-align: center;
+
+}
+
+
+.contacto ul {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem 1.3rem;
+
+}
+
+
+.contacto a {
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+.contacto a:hover {
+
+    color: var(--dorado);
+
+}
+
+
+.contacto a:focus {
+
+    color: var(--celeste);
+
+    outline: 2px solid var(--celeste);
+
+    outline-offset: 3px;
+
+}
+
+
+.contacto a:active {
+
+    color: var(--dorado);
+
+}
+
+
+.contacto p {
+
+    margin-top: 1.4rem;
+
+    color: #C7C7C7;
+
+    font-size: 0.74rem;
+
+}
+
+
+/* ==================== TABLET ==================== */
+
+/*
+A partir de 768px se comienza a ampliar
+la estructura de la grilla.
+
+El diseño continúa siendo Mobile First.
+*/
+
+@media (min-width: 768px) {
+
+    main {
+
+        width: min(960px, calc(100% - 40px));
+
+    }
+
+
+    /* ==================== TARJETAS ==================== */
+
+    .proyecto,
+    .etapas,
+    .noticias,
+    .publicaciones,
+    .equipo {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: auto;
+
+    }
+
+
+    /* ==================== OBJETIVOS ==================== */
+
+    .objetivos {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* ==================== REDES ==================== */
+
+    .redes {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* ==================== CARRUSEL ==================== */
+
+    #carouselCanSat .carousel-item img {
+
+        height: 400px;
+
+    }
+
+}
+
+
+/* ==================== DESKTOP ==================== */
+
+/*
+A partir de 1024px se amplía la grilla principal.
+
+El diseño base sigue siendo Mobile First.
+*/
+
+@media (min-width: 1024px) {
+
+    main {
+
+        width: min(1120px, calc(100% - 40px));
+
+    }
+
+
+    section {
+
+        padding: 82px 0;
+
+    }
+
+
+    .introduccion {
+
+        padding:
+            0
+            max(20px, calc((100vw - 1120px) / 2));
+
+    }
+
+
+    /* ==================== NAVEGACIÓN ==================== */
+
+    .navegacion .navbar-nav {
+
+        gap: 0.35rem;
+
+    }
+
+
+    /* ==================== TARJETAS ==================== */
+
+    .proyecto,
+    .etapas,
+    .noticias,
+    .publicaciones,
+    .equipo {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: auto;
+
+    }
+
+
+    /* ==================== GRID PRINCIPAL ==================== */
+
+    /*
+    Desktop:
+
+    El título ocupa la primera columna.
+    El contenido ocupa la segunda columna.
+
+    Se utiliza grid-template-areas para
+    definir explícitamente la distribución.
+    */
+
+    .telemetria,
+    .programacion,
+    .foro {
+
+        grid-template-columns: 0.75fr 1.25fr;
+
+        grid-template-rows: 1fr;
+
+        grid-template-areas:
+
+            "titulo contenido";
+
+        gap: 2rem;
+
+    }
+
+
+    /* ==================== OBJETIVOS ==================== */
+
+    .objetivos {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+    /* ==================== REDES ==================== */
+
+    .redes {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+    /* ==================== FORMULARIO ==================== */
+
+    .formulario-contacto form {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .formulario-contacto form div:last-of-type {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    /* ==================== CARRUSEL ==================== */
+
+    .galeria {
+
+        padding: 82px 0;
+
+    }
+
+
+    #carouselCanSat .carousel-item img {
+
+        height: 500px;
+
+    }
+
+}
+
+
+/* ==================== PANTALLAS GRANDES ==================== */
+
+@media (min-width: 1440px) {
+
+    main {
+
+        width: min(1200px, calc(100% - 60px));
+
+    }
+
+
+    .introduccion {
+
+        padding:
+            0
+            max(40px, calc((100vw - 1200px) / 2));
+
+    }
+
+}
