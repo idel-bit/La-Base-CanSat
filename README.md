@@ -31,7 +31,8 @@ El sitio presenta información sobre el proyecto, sus objetivos, avances realiza
 ## 🛠️ Tecnologías utilizadas
 
 - HTML5
-- CSS3
+- SCSS / Sass
+- CSS3 (archivo generado desde SCSS)
 - Bootstrap 5.3.3
 - Flexbox
 - CSS Grid
@@ -60,8 +61,47 @@ La Base CanSat/
 │   ├── comunidad.html
 │   └── contacto.html
 │
+├── scss/
+│   ├── main.scss
+│   ├── utilities/
+│   │   ├── _variables.scss
+│   │   └── _mixins.scss
+│   ├── base/
+│   │   ├── _tipografia.scss
+│   │   ├── _base.scss
+│   │   └── _estructura.scss
+│   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _nav.scss
+│   │   ├── _footer.scss
+│   │   └── _responsive.scss
+│   └── components/
+│       ├── _hero.scss
+│       ├── _buttons.scss
+│       ├── _cards.scss
+│       ├── _forms.scss
+│       ├── _carousel.scss
+│       ├── _accordion.scss
+│       └── _bootstrap-cards.scss
 └── styles/
     └── styles.css
+```
+
+---
+
+## 🧱 Compilar estilos
+
+El CSS que carga el sitio se genera desde `scss/main.scss`; no se edita a mano.
+
+```bash
+npm install
+npm run build:css
+```
+
+Para recompilar automáticamente mientras se trabaja:
+
+```bash
+npm run watch:css
 ```
 
 ---

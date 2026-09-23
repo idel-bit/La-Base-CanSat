@@ -1,0 +1,78 @@
+@use "../utilities/variables" as *;
+
+/* ==================== RESET Y BASE DEL SITIO ==================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-width: 320px;
+
+    overflow-x: hidden;
+
+    color: $blanco;
+    background: $fondo;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.75;
+
+}
+
+
+body::before {
+
+    content: '';
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.9;
+
+    background:
+        radial-gradient($detalle 0.9px,transparent 1.5px) 0 0 / 32px 32px;
+
+}
+
+
+/* ==================== IMÁGENES Y ENLACES ==================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}

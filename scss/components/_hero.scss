@@ -1,0 +1,106 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* ==================== PORTADAS ==================== */
+
+.introduccion,
+.presentacion,
+.introduccion-avances,
+.introduccion-comunidad,
+.introduccion-contacto {
+
+    width: 100vw;
+
+    min-height: 440px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    align-content: center;
+
+    gap: 0.3rem;
+
+    padding:
+        84px
+        20px
+        20px;
+
+    box-sizing: border-box;
+
+    border: 0;
+
+}
+/* ==================== PORTADA DE INICIO ==================== */
+
+.introduccion {
+
+    width: 100vw;
+
+    min-height: calc(100svh - 84px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: 0px;
+
+    @include fondo-portada;
+
+}
+
+/* ==================== PORTADA DE LA BASE ==================== */
+
+.presentacion {
+
+    width: 100vw;
+
+    min-height: calc(100svh - 84px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: 0px;
+
+    @include fondo-portada;
+
+}
+
+/* ==================== PORTADA DE AVANCES ==================== */
+.introduccion-avances {
+
+    width: 100vw;
+
+    min-height: calc(100svh - 84px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: 0px;
+
+    @include fondo-portada;
+
+}
+/* ==================== PORTADA DE COMUNIDAD ==================== */
+.introduccion-comunidad {
+
+    width: 100vw;
+
+    min-height: calc(100svh - 84px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: 0px;
+
+    @include fondo-portada;
+
+}
+    /* Styles for the community landing page */
+/* ==================== PORTADA DE CONTACTO ==================== */
+.introduccion-contacto {
+    /* Styles for the contact landing page */
+
+    width: 100vw;
+
+    min-height: calc(100svh - 84px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: 0px;
+
+    @include fondo-portada;
+
+}

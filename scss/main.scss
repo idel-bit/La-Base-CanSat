@@ -1,0 +1,16 @@
+// Punto de entrada único: compilar este archivo genera styles/styles.css.
+@use "base/tipografia";
+@use "utilities/variables" as *;
+@use "base/base";
+@use "layout/header";
+@use "layout/nav";
+@use "base/estructura";
+@use "components/hero";
+@use "components/buttons";
+@use "components/cards";
+@use "components/forms";
+@use "components/carousel";
+@use "components/accordion";
+@use "components/bootstrap-cards";
+@use "layout/footer";
+@use "layout/responsive";

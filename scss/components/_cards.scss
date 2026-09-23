@@ -1,0 +1,247 @@
+@use "../utilities/variables" as *;
+
+/* ==================== SECCIONES DESTACADAS ==================== */
+
+.informacion-general,
+.quienes-somos,
+.que-es-cansat,
+.mision,
+.sensorica,
+.estructura,
+.pruebas,
+.recursos,
+.formulario-contacto {
+
+    margin: 1rem 0;
+
+    padding: 1.5rem;
+
+    border-radius: $radio;
+
+    background:
+        linear-gradient(
+            135deg,
+            $superficie-destacada-fuerte,
+            $superficie-destacada-suave
+        );
+
+}
+
+
+/* ==================== TARJETAS ==================== */
+
+.proyecto,
+.etapas,
+.noticias,
+.publicaciones,
+.equipo {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    gap: 1.25rem;
+
+}
+
+
+.proyecto > h2,
+.etapas > h2,
+.noticias > h2,
+.publicaciones > h2,
+.equipo > h2 {
+
+    grid-column: 1 / -1;
+
+}
+
+/* ==================== GRID DE TARJETAS ==================== */
+
+.proyecto article,
+.etapas article,
+.noticias article,
+.publicaciones article,
+.equipo article,
+.telemetria article,
+.programacion article,
+.foro article,
+.redes article {
+
+    padding: 1.5rem;
+
+    border: 2px solid $detalle;
+
+    border-radius: $radio;
+    
+
+    background: $fondo-tarjeta-translucido;
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid $blanco-translucido-medio;
+
+    -webkit-backdrop-filter: blur(9px);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px $sombra-tarjeta;
+
+    color: $blanco;
+
+    box-shadow:
+        0 16px 36px $sombra-tarjeta-suave;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.proyecto article:hover,
+.etapas article:hover,
+.noticias article:hover,
+.publicaciones article:hover,
+.equipo article:hover {
+
+    border-color: $dorado;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==================== GRID PRINCIPAL ==================== */
+
+/*
+Mobile First:
+
+El título y el contenido se organizan
+en una sola columna.
+
+Desktop:
+
+Se utilizan dos columnas mediante
+grid-template-areas.
+*/
+
+.telemetria,
+.programacion,
+.foro {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+
+        "titulo"
+        "contenido";
+
+    align-items: center;
+
+    gap: 2rem;
+
+}
+
+
+.telemetria h2,
+.programacion h2,
+.foro h2 {
+
+    grid-area: titulo;
+
+    margin: 0;
+
+}
+
+
+.telemetria article,
+.programacion article,
+.foro article {
+
+    grid-area: contenido;
+
+}
+
+
+/* ==================== OBJETIVOS Y RECURSOS ==================== */
+
+.objetivos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+}
+
+
+
+.objetivos article,
+.recursos article {
+
+    padding: 1rem;
+
+    border-left: 3px solid $dorado;
+
+    border-radius: 0 $radio $radio 0;
+
+    background: $detalle;
+
+}
+
+
+/* ==================== IMAGEN DEL EQUIPO ==================== */
+
+.equipo figure {
+
+    overflow: hidden;
+
+    border: 1px solid $detalle;
+
+    border-radius: $radio;
+
+    background: $tarjeta;
+
+}
+
+
+.equipo figure img {
+
+    width: 100%;
+
+    height: 90%;
+
+    object-fit: cover;
+
+}
+
+
+.equipo figcaption {
+
+    padding: 0.7rem 1rem;
+
+    font-size: 0.76rem;
+
+}
+
+
+/* ==================== ARTÍCULO DEL EQUIPO ==================== */
+
+/*
+Evita que el artículo "Conocé más sobre nosotros"
+se estire hasta igualar la altura de la imagen.
+*/
+
+.equipo article {
+
+    align-self: center;
+
+}

@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+// Fondo compartido por las portadas de las cinco páginas.
+@mixin fondo-portada {
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 75%,
+            $fondo 100%
+        ),
+
+        linear-gradient(
+            90deg,
+            $overlay-portada-fuerte,
+            $overlay-portada-medio 55%,
+            $overlay-portada-suave
+        ),
+
+        url('../assets/img/index.png')
+        center / cover no-repeat;
+
+}

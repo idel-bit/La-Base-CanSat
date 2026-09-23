@@ -1,0 +1,82 @@
+@use "../utilities/variables" as *;
+
+/* ==================== CARDS BOOTSTRAP ==================== */
+
+.card {
+
+    border: 1px solid $detalle;
+
+    border-radius: $radio;
+
+    color: $blanco;
+
+    background: $tarjeta;
+
+    box-shadow:
+        0 16px 36px $sombra-tarjeta-suave;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.card:hover {
+
+    border-color: $celeste;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 40px $sombra-tarjeta;
+
+}
+
+
+.card:focus-within {
+
+    border-color: $celeste;
+
+    box-shadow:
+        0 0 0 3px $foco-celeste;
+
+}
+
+
+.card-body {
+
+    padding: 1.5rem;
+
+}
+
+
+.card-title {
+
+    margin-bottom: 0.75rem;
+
+    color: $blanco;
+
+    font-family: 'Nulkshock', 'Montserrat', Arial, sans-serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+}
+
+
+.card-text {
+
+    margin-bottom: 0;
+
+    color: $blanco;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}

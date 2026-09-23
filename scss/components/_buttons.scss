@@ -1,0 +1,66 @@
+@use "../utilities/variables" as *;
+
+/* ==================== BOTONES ==================== */
+
+.introduccion > a,
+.equipo article a,
+.avances article a {
+
+    width: fit-content;
+
+    padding: 0.6rem 1.2rem;
+
+    border: 1px solid $dorado;
+
+    border-radius: 12px;
+
+    color: $dorado;
+
+    background: transparent;
+
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.5s ease;
+
+
+    &:hover {
+
+        color: $oscuro;
+
+        background: $dorado;
+
+        transform: translateY(-2px);
+
+    }
+
+
+    &:focus {
+
+        outline: 2px solid $dorado;
+
+        outline-offset: 3px;
+
+    }
+
+
+    &:active {
+
+        transform: translateY(0);
+
+        background: $dorado;
+
+    }
+
+}

@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.105.0"
+  },
+  "scripts": {
+    "build:css": "sass scss/main.scss styles/styles.css --no-source-map",
+    "watch:css": "sass --watch scss/main.scss:styles/styles.css --no-source-map"
+  }
+}

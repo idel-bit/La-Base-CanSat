@@ -1,0 +1,247 @@
+@use "../utilities/variables" as *;
+
+/* ==================== TABLET ==================== */
+
+/*
+A partir de 768px se comienza a ampliar
+la estructura de la grilla.
+
+El diseño continúa siendo Mobile First.
+*/
+
+@media (min-width: 768px) {
+
+    main {
+
+        width: min(960px, calc(100% - 40px));
+
+    }
+
+
+    /* ==================== TARJETAS ==================== */
+
+    .proyecto,
+    .etapas,
+    .noticias,
+    .publicaciones,
+    .equipo {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: auto;
+
+    }
+
+
+    /* ==================== OBJETIVOS ==================== */
+
+    .objetivos {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* ==================== REDES ==================== */
+
+   .redes {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+    }
+
+
+    /* ==================== CARRUSEL ==================== */
+
+    #carouselCanSat .carousel-item img {
+
+        height: 400px;
+
+    }
+
+}
+
+
+/* ==================== DESKTOP ==================== */
+
+/*
+A partir de 1024px se amplía la grilla principal.
+
+El diseño base sigue siendo Mobile First.
+*/
+
+@media (min-width: 1024px) {
+
+    main {
+
+        width: min(1120px, calc(100% - 40px));
+
+    }
+
+
+    section {
+
+        padding: 82px 0;
+
+    }
+
+
+    .introduccion,.presentacion,.introduccion-avances,.introduccion-comunidad,.introduccion-contacto {
+
+        padding:
+            84px
+            max(20px, calc((100vw - 1120px) / 2));
+
+    }
+
+
+    /* ==================== NAVEGACIÓN ==================== */
+
+    .navegacion .navbar-nav {
+
+        gap: 0.35rem;
+
+    }
+
+
+    /* ==================== ETAPAS Y TARJETA ACTIVA ==================== */
+
+    .etapas-contenido {
+
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+
+        align-items: start;
+
+    }
+
+
+    .etapa-visual {
+
+        position: sticky;
+
+        top: 7rem;
+
+        min-height: 24rem;
+
+    }
+
+
+    /* ==================== TARJETAS ==================== */
+
+    .proyecto,
+    .etapas,
+    .noticias,
+    .publicaciones,
+    .equipo {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: auto;
+
+    }
+
+
+    /* ==================== GRID PRINCIPAL ==================== */
+
+    /*
+    Desktop:
+
+    El título ocupa la primera columna.
+    El contenido ocupa la segunda columna.
+
+    Se utiliza grid-template-areas para
+    definir explícitamente la distribución.
+    */
+
+    .telemetria,
+    .programacion,
+    .foro {
+
+        grid-template-columns: 0.75fr 1.25fr;
+
+        grid-template-rows: 1fr;
+
+        grid-template-areas:
+
+            "titulo contenido";
+
+        gap: 2rem;
+
+    }
+
+
+    /* ==================== OBJETIVOS ==================== */
+
+    .objetivos {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+    /* ==================== REDES ==================== */
+
+    .redes {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+    /* ==================== FORMULARIO ==================== */
+
+    .formulario-contacto form {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .formulario-contacto form div:last-of-type {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    /* ==================== CARRUSEL ==================== */
+
+    .galeria {
+
+        padding: 82px 0;
+
+    }
+
+
+    #carouselCanSat .carousel-item img {
+
+        height: 500px;
+
+    }
+
+}
+
+
+/* ==================== PANTALLAS GRANDES ==================== */
+
+@media (min-width: 1440px) {
+
+    main {
+
+        width: min(1200px, calc(100% - 60px));
+
+    }
+
+
+    .introduccion,.presentacion,.introduccion-avances,.introduccion-comunidad,.introduccion-contacto {
+
+        padding:
+            84px
+            max(40px, calc((100vw - 1200px) / 2));
+
+    }
+
+}

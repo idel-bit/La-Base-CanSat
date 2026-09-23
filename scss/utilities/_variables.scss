@@ -1,0 +1,32 @@
+// Paleta principal y valores reutilizados en todo el sitio.
+$fondo: #070707;
+$oscuro: #202223;
+$tarjeta: #858586;
+$detalle: #3F3F3F;
+$blanco: #FFFFFF;
+$dorado: #DAA520;
+$celeste: #418a9a;
+$azul: #203A59;
+$radio: 18px;
+
+// Tonos auxiliares usados en transparencias y estados interactivos.
+$texto-secundario: #C7C7C7;
+
+$borde-enfoque-navbar: rgba(252, 252, 252, 0.351);
+$overlay-portada-fuerte: rgba(42, 44, 45, 0.86);
+$overlay-portada-medio: rgba(42, 44, 45, 0.55);
+$overlay-portada-suave: rgba(42, 44, 45, 0.25);
+$superficie-destacada-fuerte: rgba(63, 63, 63, 0.75);
+$superficie-destacada-suave: rgba(63, 63, 63, 0.15);
+$fondo-tarjeta-translucido: rgba(255, 255, 255, 0.06);
+$blanco-translucido-medio: rgba(255, 255, 255, 0.12);
+$sombra-tarjeta: rgba(0, 0, 0, 0.3);
+$sombra-tarjeta-suave: rgba(0, 0, 0, 0.22);
+$foco-celeste-suave: rgba(62, 219, 255, 0.13);
+$foco-celeste: rgba(62, 219, 255, 0.15);
+$overlay-carrusel: rgba(11, 11, 11, 0.75);
+$borde-etapa: rgba(255, 255, 255, 0.16);
+$halo-dorado: rgba(218, 165, 32, 0.22);
+$superficie-etapa-base: rgba(63, 63, 63, 0.92);
+$fondo-etapa: rgba(32, 34, 35, 0.96);
+$texto-etapa: rgba(255, 255, 255, 0.82);

@@ -1,0 +1,75 @@
+@use "../utilities/variables" as *;
+
+/* ==================== PIE DE PÁGINA ==================== */
+
+.contacto {
+
+    padding: 42px 24px 22px;
+
+    border-top: 1px solid $detalle;
+
+    background: $oscuro;
+
+    text-align: center;
+
+}
+
+
+.contacto ul {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem 1.3rem;
+
+}
+
+
+.contacto a {
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+.contacto a:hover {
+
+    color: $dorado;
+
+}
+
+
+.contacto a:focus {
+
+    color: $celeste;
+
+    outline: 2px solid $celeste;
+
+    outline-offset: 3px;
+
+}
+
+
+.contacto a:active {
+
+    color: $dorado;
+
+}
+
+
+.contacto p {
+
+    margin-top: 1.4rem;
+
+    color: $texto-secundario;
+
+    font-size: 0.74rem;
+
+}

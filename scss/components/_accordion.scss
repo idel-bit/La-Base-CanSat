@@ -1,0 +1,202 @@
+@use "../utilities/variables" as *;
+
+/* ==================== ACCORDION BOOTSTRAP ==================== */
+
+.etapas-contenido {
+
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 1.25rem;
+
+}
+
+
+.etapa-visual {
+
+    display: none;
+
+    min-height: 18rem;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 1.5rem;
+
+    overflow: hidden;
+
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+
+    border: 1px solid $borde-etapa;
+
+    border-radius: $radio;
+
+    background:
+        radial-gradient(circle at 85% 18%, $halo-dorado, transparent 38%),
+        linear-gradient(145deg, $superficie-etapa-base, $fondo-etapa);
+
+    box-shadow: 0 16px 36px $sombra-tarjeta-suave;
+
+}
+
+
+.etapas-contenido:has(#headingEtapa1 .accordion-button[aria-expanded="true"]) .etapa-visual--1,
+.etapas-contenido:has(#headingEtapa2 .accordion-button[aria-expanded="true"]) .etapa-visual--2,
+.etapas-contenido:has(#headingClasificacion .accordion-button[aria-expanded="true"]) .etapa-visual--clasificacion,
+.etapas-contenido:has(#headingDesarrollo .accordion-button[aria-expanded="true"]) .etapa-visual--desarrollo {
+
+    display: flex;
+
+}
+
+
+.etapa-visual__etiqueta {
+
+    color: $dorado;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+
+.etapa-visual__numero {
+
+    color: $blanco-translucido-medio;
+
+    font-family: 'Nulkshock', 'Montserrat', Arial, sans-serif;
+
+    font-size: clamp(4.5rem, 15vw, 8rem);
+
+    line-height: 0.95;
+
+}
+
+
+.etapa-visual h3 {
+
+    margin-bottom: 0.65rem;
+
+    color: $blanco;
+
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+
+}
+
+
+.etapa-visual p {
+
+    margin: 0;
+
+    color: $texto-etapa;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+}
+
+.accordion {
+
+    --bs-accordion-bg: $tarjeta;
+
+    --bs-accordion-color: $blanco;
+
+    --bs-accordion-border-color: $detalle;
+
+    --bs-accordion-btn-color: $blanco;
+
+    --bs-accordion-btn-bg: $tarjeta;
+
+    --bs-accordion-active-color: $celeste;
+
+    --bs-accordion-active-bg: $oscuro;
+
+    --bs-accordion-btn-focus-box-shadow:
+        0 0 0 3px $foco-celeste;
+
+}
+
+
+.accordion-item {
+
+    margin-bottom: 0.75rem;
+
+    overflow: hidden;
+
+    border: 1px solid $detalle;
+
+    border-radius: $radio !important;
+
+    background: $tarjeta;
+
+}
+
+
+.accordion-button {
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+.accordion-button:hover {
+
+    color: $dorado;
+
+}
+
+
+.accordion-button:focus {
+
+    color: $celeste;
+
+}
+
+
+.accordion-button:not(.collapsed) {
+
+    color: $celeste;
+
+    background: $oscuro;
+
+}
+
+
+.accordion-button::after {
+
+    filter:
+        brightness(0)
+        invert(1);
+
+}
+
+
+.accordion-body {
+
+    color: $blanco;
+
+    background: $tarjeta;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
