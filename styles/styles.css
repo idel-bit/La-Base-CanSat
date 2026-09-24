@@ -121,14 +121,14 @@ header {
 
 .navegacion .nav-link:hover {
   color: #DAA520 !important;
-  background: color-mix(is srgb, #3F3F3F 50%, #DAA520 70%);
+  background: color-mix(in srgb, #3F3F3F 50%, #DAA520 70%);
   outline: 1px solid #DAA520;
   transform: translateY(-2px);
 }
 
 .navegacion .nav-link:focus {
   color: #DAA520 !important;
-  background: color-mix(is srgb, #3F3F3F 50%, #DAA520 70%);
+  background: color-mix(in srgb, #3F3F3F 50%, #DAA520 70%);
   outline: 2px solid #DAA520;
   outline-offset: 2px;
 }
@@ -147,13 +147,13 @@ header {
 .navegacion .navbar-toggler {
   padding: 0.5rem 0.7rem;
   border: 1px solid #3F3F3F;
-  border-radius: 10 px;
+  border-radius: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
 }
 
 .navegacion .navbar-toggler:hover {
   border-color: #DAA520;
-  background: color-mix(is srgb, #3F3F3F 50%, #DAA520 70%);
+  background: color-mix(in srgb, #3F3F3F 50%, #DAA520 70%);
 }
 
 .navegacion .navbar-toggler:focus {
@@ -377,6 +377,18 @@ section li::before {
 }
 
 /* ==================== TARJETAS ==================== */
+.proyecto article,
+.etapas article,
+.noticias article,
+.publicaciones article,
+.equipo article,
+.telemetria article,
+.programacion article,
+.foro article,
+.redes article {
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .proyecto,
 .etapas,
 .noticias,
@@ -417,7 +429,6 @@ section li::before {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   color: #FFFFFF;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proyecto article:hover,

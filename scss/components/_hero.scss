@@ -44,7 +44,7 @@
     margin-left: calc(50% - 50vw);
     margin-top: 0px;
 
-    @include fondo-portada;
+    @include fondo-portada('../assets/img/index.png', center);
 
 }
 
@@ -59,7 +59,7 @@
     margin-left: calc(50% - 50vw);
     margin-top: 0px;
 
-    @include fondo-portada;
+    @include fondo-portada('../assets/img/index.png', center);
 
 }
 
@@ -73,7 +73,7 @@
     margin-left: calc(50% - 50vw);
     margin-top: 0px;
 
-    @include fondo-portada;
+    @include fondo-portada('../assets/img/index.png', center);
 
 }
 /* ==================== PORTADA DE COMUNIDAD ==================== */
@@ -86,7 +86,7 @@
     margin-left: calc(50% - 50vw);
     margin-top: 0px;
 
-    @include fondo-portada;
+    @include fondo-portada('../assets/img/index.png', center);
 
 }
     /* Styles for the community landing page */
@@ -101,6 +101,6 @@
     margin-left: calc(50% - 50vw);
     margin-top: 0px;
 
-    @include fondo-portada;
+    @include fondo-portada('../assets/img/index.png', center);
 
 }

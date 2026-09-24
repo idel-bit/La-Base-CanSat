@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 // Fondo compartido por las portadas de las cinco páginas.
-@mixin fondo-portada {
+@mixin fondo-portada($imagen: '../assets/img/index.png', $posicion: center) {
 
     background:
         linear-gradient(
@@ -17,7 +17,7 @@
             $overlay-portada-suave
         ),
 
-        url('../assets/img/index.png')
-        center / cover no-repeat;
+        url($imagen)
+        #{$posicion} / cover no-repeat;
 
 }
