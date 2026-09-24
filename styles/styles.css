@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "Nulkshock";
-  src: url("../assets/tipografy/Nulshock Bd.otf") format("opentype");
+  src: url("../assets/fonts/nulshock-bold.otf") format("opentype");
 }
 /* ==================== RESET Y BASE DEL SITIO ==================== */
 * {
@@ -259,6 +259,14 @@ section li::before {
 }
 
 /* ==================== PORTADAS ==================== */
+.marca-intro {
+  margin-bottom: 0.25rem;
+  color: #DAA520;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
 .introduccion,
 .presentacion,
 .introduccion-avances,
@@ -282,7 +290,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50vw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/index.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE LA BASE ==================== */
@@ -291,7 +299,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50vw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/index.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE AVANCES ==================== */
@@ -300,7 +308,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50vw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/index.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE COMUNIDAD ==================== */
@@ -309,7 +317,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50vw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/index.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* Styles for the community landing page */
@@ -320,7 +328,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50vw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/index.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== BOTONES ==================== */
@@ -500,7 +508,7 @@ grid-template-areas.
   overflow: hidden;
   border: 1px solid #3F3F3F;
   border-radius: 18px;
-  background: #858586;
+  background: #595A5B;
 }
 
 .equipo figure img {
@@ -753,7 +761,7 @@ textarea {
   overflow: hidden;
   border: 1px solid #3F3F3F;
   border-radius: 18px !important;
-  background: #858586;
+  background: #595A5B;
 }
 
 .accordion-button {
@@ -782,7 +790,7 @@ textarea {
 
 .accordion-body {
   color: #FFFFFF;
-  background: #858586;
+  background: #595A5B;
   font-size: 0.9rem;
   line-height: 1.7;
 }
@@ -792,7 +800,7 @@ textarea {
   border: 1px solid #3F3F3F;
   border-radius: 18px;
   color: #FFFFFF;
-  background: #858586;
+  background: #595A5B;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }

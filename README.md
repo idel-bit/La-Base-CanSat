@@ -53,7 +53,7 @@ La Base CanSat/
 │
 ├── assets/
 │   ├── img/
-│   └── tipografy/
+│   └── fonts/
 │
 ├── pages/
 │   ├── base-cansat.html
@@ -151,6 +151,10 @@ El sitio cuenta con diferentes puntos de quiebre para adaptar la distribución d
 - **1440px**
 
 La estructura se adapta progresivamente según el tamaño de pantalla, reorganizando los elementos y las áreas de la grilla cuando es necesario.
+
+## 🔎 SEO y accesibilidad
+
+Cada página incluye un título, una descripción y keywords propias, además de metadatos para compartir en redes y una URL canónica. Las imágenes usan nombres descriptivos y textos alternativos acordes a su contenido. La página principal incorpora datos estructurados del equipo educativo.
 
 ---
 

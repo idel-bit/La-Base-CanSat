@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 // Fondo compartido por las portadas de las cinco páginas.
-@mixin fondo-portada($imagen: '../assets/img/index.png', $posicion: center) {
+@mixin fondo-portada($imagen: '../assets/img/equipo-planificando-mision-cansat.png', $posicion: center) {
 
     background:
         linear-gradient(
