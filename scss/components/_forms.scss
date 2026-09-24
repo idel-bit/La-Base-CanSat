@@ -3,25 +3,31 @@
 /* ==================== CONTACTO ==================== */
 
 .redes {
-    display: grid;
+    display: block;
+}
 
-    grid-template-columns: 1fr auto 1fr;
+.redes ul {
+
+    display: flex;
 
     align-items: center;
 
-    gap: 1rem;
+    flex-wrap: nowrap;
+
+    gap: 0.75rem 1.5rem;
+
+    margin: 1rem 0 0;
+
+    padding: 0;
+
+    list-style: none;
+
 }
 
-.redes a:nth-child(1) {
-    justify-self: end;
-}
+.redes li::before {
 
-.redes a:nth-child(2) {
-    justify-self: center;
-}
+    content: none;
 
-.redes a:nth-child(3) {
-    justify-self: start;
 }
 
 

@@ -42,18 +42,6 @@ El diseño continúa siendo Mobile First.
     }
 
 
-    /* ==================== REDES ==================== */
-
-   .redes {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 2rem;
-    }
-
-
     /* ==================== CARRUSEL ==================== */
 
     #carouselCanSat .carousel-item img {
@@ -176,15 +164,6 @@ El diseño base sigue siendo Mobile First.
     /* ==================== OBJETIVOS ==================== */
 
     .objetivos {
-
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-
-
-    /* ==================== REDES ==================== */
-
-    .redes {
 
         grid-template-columns: repeat(3, 1fr);
 
