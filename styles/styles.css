@@ -19,6 +19,7 @@ html {
 
 body {
   min-width: 320px;
+  container-type: inline-size;
   overflow-x: hidden;
   color: #FFFFFF;
   background: #070707;
@@ -272,7 +273,7 @@ section li::before {
 .introduccion-avances,
 .introduccion-comunidad,
 .introduccion-contacto {
-  width: 100vw;
+  width: 100cqw;
   min-height: 440px;
   display: grid;
   grid-template-columns: 1fr;
@@ -286,36 +287,36 @@ section li::before {
 
 /* ==================== PORTADA DE INICIO ==================== */
 .introduccion {
-  width: 100vw;
+  width: 100cqw;
   min-height: calc(100svh - 84px);
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(50% - 50cqw);
   margin-top: 0px;
   background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE LA BASE ==================== */
 .presentacion {
-  width: 100vw;
+  width: 100cqw;
   min-height: calc(100svh - 84px);
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(50% - 50cqw);
   margin-top: 0px;
   background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE AVANCES ==================== */
 .introduccion-avances {
-  width: 100vw;
+  width: 100cqw;
   min-height: calc(100svh - 84px);
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(50% - 50cqw);
   margin-top: 0px;
   background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE COMUNIDAD ==================== */
 .introduccion-comunidad {
-  width: 100vw;
+  width: 100cqw;
   min-height: calc(100svh - 84px);
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(50% - 50cqw);
   margin-top: 0px;
   background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }
@@ -324,9 +325,9 @@ section li::before {
 /* ==================== PORTADA DE CONTACTO ==================== */
 .introduccion-contacto {
   /* Styles for the contact landing page */
-  width: 100vw;
+  width: 100cqw;
   min-height: calc(100svh - 84px);
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(50% - 50cqw);
   margin-top: 0px;
   background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
 }

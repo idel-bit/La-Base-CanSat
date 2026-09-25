@@ -23,7 +23,7 @@
 .introduccion-comunidad,
 .introduccion-contacto {
 
-    width: 100vw;
+    width: 100cqw;
 
     min-height: 440px;
 
@@ -51,11 +51,11 @@
 
 .introduccion {
 
-    width: 100vw;
+    width: 100cqw;
 
     min-height: calc(100svh - 84px);
 
-    margin-left: calc(50% - 50vw);
+    margin-left: calc(50% - 50cqw);
     margin-top: 0px;
 
     @include fondo-portada('../assets/img/equipo-planificando-mision-cansat.png', center);
@@ -66,11 +66,11 @@
 
 .presentacion {
 
-    width: 100vw;
+    width: 100cqw;
 
     min-height: calc(100svh - 84px);
 
-    margin-left: calc(50% - 50vw);
+    margin-left: calc(50% - 50cqw);
     margin-top: 0px;
 
     @include fondo-portada('../assets/img/equipo-planificando-mision-cansat.png', center);
@@ -80,11 +80,11 @@
 /* ==================== PORTADA DE AVANCES ==================== */
 .introduccion-avances {
 
-    width: 100vw;
+    width: 100cqw;
 
     min-height: calc(100svh - 84px);
 
-    margin-left: calc(50% - 50vw);
+    margin-left: calc(50% - 50cqw);
     margin-top: 0px;
 
     @include fondo-portada('../assets/img/equipo-planificando-mision-cansat.png', center);
@@ -93,11 +93,11 @@
 /* ==================== PORTADA DE COMUNIDAD ==================== */
 .introduccion-comunidad {
 
-    width: 100vw;
+    width: 100cqw;
 
     min-height: calc(100svh - 84px);
 
-    margin-left: calc(50% - 50vw);
+    margin-left: calc(50% - 50cqw);
     margin-top: 0px;
 
     @include fondo-portada('../assets/img/equipo-planificando-mision-cansat.png', center);
@@ -108,11 +108,11 @@
 .introduccion-contacto {
     /* Styles for the contact landing page */
 
-    width: 100vw;
+    width: 100cqw;
 
     min-height: calc(100svh - 84px);
 
-    margin-left: calc(50% - 50vw);
+    margin-left: calc(50% - 50cqw);
     margin-top: 0px;
 
     @include fondo-portada('../assets/img/equipo-planificando-mision-cansat.png', center);
