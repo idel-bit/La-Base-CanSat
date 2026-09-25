@@ -4,6 +4,9 @@ Sitio web desarrollado como proyecto para presentar y documentar el proyecto **C
 
 ## 🌐 Sitio web
 
+**Vercel:**  
+https://la-base-can-sat.vercel.app/
+
 **GitHub Pages:**  
 https://idel-bit.github.io/La-Base-CanSat/
 
@@ -166,7 +169,7 @@ Durante el desarrollo se realizaron commits significativos para registrar las di
 
 ### Repositorio
 
-El proyecto se encuentra alojado en GitHub y publicado mediante GitHub Pages.
+El proyecto se encuentra alojado en GitHub y desplegado en Vercel y GitHub Pages.
 
 ---
 
