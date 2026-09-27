@@ -7,6 +7,8 @@
 .que-es-cansat,
 .mision,
 .sensorica,
+.telemetria,
+.programacion,
 .estructura,
 .pruebas,
 .recursos,
@@ -75,9 +77,6 @@
 .noticias article,
 .publicaciones article,
 .equipo article,
-.telemetria article,
-.programacion article,
-.foro article,
 .redes article {
 
     padding: 1.5rem;
@@ -122,58 +121,71 @@
 }
 
 
-/* ==================== GRID PRINCIPAL ==================== */
+/* ==================== EVIDENCIA DEL PROYECTO ==================== */
 
-/*
-Mobile First:
-
-El título y el contenido se organizan
-en una sola columna.
-
-Desktop:
-
-Se utilizan dos columnas mediante
-grid-template-areas.
-*/
-
-.telemetria,
-.programacion,
-.foro {
+.galeria-evidencia {
 
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
 
-    grid-template-rows: auto auto;
+    gap: 1rem;
 
-    grid-template-areas:
-
-        "titulo"
-        "contenido";
-
-    align-items: center;
-
-    gap: 2rem;
+    margin-top: 1.5rem;
 
 }
 
 
-.telemetria h2,
-.programacion h2,
-.foro h2 {
+.galeria-evidencia figure,
+.evidencia-destacada,
+.video-evidencia {
 
-    grid-area: titulo;
+    min-width: 0;
 
-    margin: 0;
+    margin: 1.5rem 0 0;
 
 }
 
 
-.telemetria article,
-.programacion article,
-.foro article {
+.galeria-evidencia img,
+.evidencia-destacada img,
+.video-evidencia video {
 
-    grid-area: contenido;
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border: 1px solid $blanco-translucido-medio;
+
+    border-radius: 12px;
+
+    background: $oscuro;
+
+}
+
+
+.video-evidencia video {
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: contain;
+
+}
+
+
+.galeria-evidencia figcaption,
+.evidencia-destacada figcaption,
+.video-evidencia figcaption {
+
+    margin-top: 0.5rem;
+
+    color: $texto-secundario;
+
+    font-size: 0.875rem;
+
+    line-height: 1.5;
 
 }
 

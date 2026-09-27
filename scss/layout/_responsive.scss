@@ -132,35 +132,6 @@ El diseño base sigue siendo Mobile First.
     }
 
 
-    /* ==================== GRID PRINCIPAL ==================== */
-
-    /*
-    Desktop:
-
-    El título ocupa la primera columna.
-    El contenido ocupa la segunda columna.
-
-    Se utiliza grid-template-areas para
-    definir explícitamente la distribución.
-    */
-
-    .telemetria,
-    .programacion,
-    .foro {
-
-        grid-template-columns: 0.75fr 1.25fr;
-
-        grid-template-rows: 1fr;
-
-        grid-template-areas:
-
-            "titulo contenido";
-
-        gap: 2rem;
-
-    }
-
-
     /* ==================== OBJETIVOS ==================== */
 
     .objetivos {

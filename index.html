@@ -10,7 +10,7 @@
 
     <meta
       name="description"
-      content="Sitio del equipo estudiantil La Base de la E.E.S.T. N.º 4: diseño, construcción y misión del satélite CanSat para el desafío CONAE 2026."
+      content="Conocé a La Base, equipo CanSat 135 de El Palomar. Seguimos el diseño, la telemetría, las pruebas del paracaídas y nuestra misión de análisis de imágenes."
     />
 
     <meta
@@ -24,10 +24,10 @@
       property="og:title"
       content="La Base CanSat CONAE 2026 | Equipo estudiantil"
     />
-    <meta
-      property="og:description"
-      content="Conocé el equipo estudiantil La Base y su proyecto CanSat para el desafío CONAE 2026."
-    />
+        <meta
+          property="og:description"
+          content="Conocé a La Base, equipo CanSat 135 de El Palomar, y seguí la construcción, telemetría y pruebas de nuestra misión."
+        />
     <meta
       property="og:url"
       content="https://idel-bit.github.io/La-Base-CanSat/"
@@ -152,9 +152,10 @@
         <h1>CanSat CONAE 2026</h1>
 
         <p>
-          Somos estudiantes de la E.E.S.T. N°4 y participamos en el desafío
-          CanSat de CONAE junto a ACEMA, para diseñar, construir y operar un
-          satélite del tamaño de una lata.
+          Somos La Base, un equipo de la E.E.S.T. N° 4 “I Brigada Aérea” de El
+          Palomar. Participamos del Certamen CanSat Secundario 2026 de CONAE:
+          diseñamos un satélite del tamaño de una lata y ponemos a prueba ideas
+          de electrónica, programación y observación de la Tierra.
         </p>
 
         <a href="pages/base-cansat.html"> Conocé nuestro proyecto </a>
@@ -190,6 +191,27 @@
               data-bs-slide-to="2"
               aria-label="Imagen 3"
             ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselCanSat"
+              data-bs-slide-to="3"
+              aria-label="Imagen 4"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselCanSat"
+              data-bs-slide-to="4"
+              aria-label="Imagen 5"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselCanSat"
+              data-bs-slide-to="5"
+              aria-label="Imagen 6"
+            ></button>
           </div>
 
           <!-- IMÁGENES -->
@@ -197,17 +219,17 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="./assets/img/equipo-la-base-cansat.png"
+                src="./assets/img/esp32%20rx%20y%20tx.jpeg"
                 class="d-block w-100"
-                alt="Integrantes de La Base junto al CanSat durante una actividad del proyecto"
+                alt="Módulos LoRa de transmisión y recepción para la telemetría del CanSat"
               />
             </div>
 
             <div class="carousel-item">
               <img
-                src="./assets/img/equipo-planificando-mision-cansat.png"
+                src="./assets/img/impresion%203d%20cansat.jpeg"
                 class="d-block w-100"
-                alt="Estudiante de La Base planificando en el pizarrón las etapas de la misión CanSat"
+                alt="Impresora 3D fabricando una pieza del prototipo CanSat"
               />
             </div>
 
@@ -216,6 +238,29 @@
                 src="./assets/img/modelo-3d-satelite-cansat.png"
                 class="d-block w-100"
                 alt="Modelo técnico tridimensional del satélite CanSat y sus componentes"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./assets/img/paracaidas%20corte.jpeg"
+                class="d-block w-100"
+                alt="Tela cortada para confeccionar el paracaídas del CanSat"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/pruebas%20de%20imagenes%20IA2.jpeg"
+                class="d-block w-100"
+                alt="Imagen urbana segmentada por categorías durante una prueba de inteligencia artificial"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./assets/img/redise%C3%B1o%20estructura.jpeg"
+                class="d-block w-100"
+                alt="Boceto de rediseño de la estructura del CanSat"
               />
             </div>
           </div>
@@ -255,14 +300,15 @@
 
         <article data-aos="zoom-in" data-aos-duration="500">
           <p>
-            La Base CanSat es nuestro espacio de desarrollo, experimentación y
-            documentación del proyecto CanSat CONAE 2026.
+            Somos el equipo La Base, código CONAE 135. Después de clasificar en
+            segundo lugar, comenzamos a construir e integrar los sistemas de
+            nuestro CanSat.
           </p>
 
           <p>
-            En este proyecto combinamos conocimientos de aeronáutica,
-            electrónica, programación, sensórica, comunicaciones y tecnología
-            aeroespacial.
+            En el taller combinamos diseño, electrónica, programación y pruebas.
+            En esta web compartimos lo que aprendemos y los avances tal como
+            ocurren.
           </p>
         </article>
       </section>
@@ -274,9 +320,9 @@
 
         <article>
           <p>
-            Diseñar un CanSat capaz de cumplir la misión oficial de CONAE y
-            desarrollar una misión secundaria enfocada en la adquisición de
-            imágenes y datos durante el descenso.
+            La misión primaria mide presión atmosférica y temperatura durante
+            el descenso. Como misión secundaria, buscamos capturar imágenes y
+            analizarlas para reconocer características del terreno.
           </p>
         </article>
       </section>
@@ -290,8 +336,9 @@
           <h3>Sensórica</h3>
 
           <p>
-            Desarrollo e integración de los sensores necesarios para obtener
-            información durante la misión.
+            El BME280 registra presión y temperatura, datos centrales de la
+            misión primaria. Estamos revisando sus lecturas y la integración
+            del sensor al sistema.
           </p>
         </article>
 
@@ -299,8 +346,9 @@
           <h3>Telemetría</h3>
 
           <p>
-            Sistema de comunicación destinado a transmitir los datos obtenidos
-            por el CanSat hacia la estación terrestre.
+            Los módulos LoRa enlazan el CanSat con la estación terrestre. En
+            las primeras pruebas verificamos transmisión y recepción entre
+            dos módulos.
           </p>
         </article>
 
@@ -308,8 +356,9 @@
           <h3>Estructura</h3>
 
           <p>
-            Diseño y construcción de la estructura y de los diferentes sistemas
-            físicos que forman parte del CanSat.
+            Diseñamos una estructura compacta para alojar y proteger la
+            electrónica y la cámara. También confeccionamos y probamos un
+            prototipo de paracaídas.
           </p>
         </article>
 
@@ -317,8 +366,9 @@
           <h3>Programación</h3>
 
           <p>
-            Desarrollo del software encargado de controlar los sistemas,
-            procesar información y gestionar la misión.
+            Probamos el análisis de imágenes con segmentación semántica y
+            detección de objetos. La demo combina imágenes con datos simulados
+            mientras preparamos la integración con el hardware.
           </p>
         </article>
       </section>
@@ -330,9 +380,9 @@
 
         <article>
           <p>
-            Nuestro objetivo es desarrollar un sistema capaz de cumplir con los
-            requerimientos de la misión mientras adquirimos experiencia práctica
-            en el desarrollo de tecnología aeroespacial.
+            Queremos integrar las mediciones y la telemetría de la misión
+            primaria con el registro de imágenes de la misión secundaria, y
+            aprender de cada prueba antes de avanzar al siguiente paso.
           </p>
 
           <ul>
@@ -340,11 +390,11 @@
 
             <li>Integrar sensores y sistemas electrónicos.</li>
 
-            <li>Desarrollar un sistema de telemetría.</li>
+            <li>Transmitir presión y temperatura a la estación terrestre.</li>
 
             <li>Obtener y analizar datos durante la misión.</li>
 
-            <li>Desarrollar nuestra misión secundaria.</li>
+            <li>Explorar el mapeo del terreno mediante imágenes e IA.</li>
 
             <li>Realizar pruebas y validar los sistemas.</li>
           </ul>
@@ -367,8 +417,9 @@
 
         <article>
           <p>
-            Somos un equipo de estudiantes que trabaja de manera colaborativa en
-            las diferentes áreas necesarias para desarrollar nuestro CanSat.
+            Somos cinco estudiantes de la Escuela de Educación Secundaria
+            Técnica N.º 4 “I Brigada Aérea”, acompañados por nuestro tutor,
+            Feltrin José Franco.
           </p>
 
           <a href="pages/base-cansat.html"> Conocé más sobre nosotros </a>
@@ -382,9 +433,9 @@
 
         <article>
           <p>
-            Desde nuestra participación en las primeras etapas de la competencia
-            hasta el desarrollo actual del CanSat, cada etapa representa un
-            nuevo desafío para nuestro equipo.
+            Clasificamos en segundo lugar con 182,5 puntos y avanzamos del
+            diseño a la construcción: trabajamos en la electrónica, la
+            telemetría, la inteligencia artificial y el paracaídas.
           </p>
 
           <a href="pages/avances.html"> Ver nuestros avances </a>
@@ -411,7 +462,7 @@
         <ul>
           <li>
             <a
-              href="https://www.instagram.com/labase.cansat/?__pwa=1"
+              href="https://www.instagram.com/labase.cansat/"
               target="_blank"
             >
               Instagram
@@ -425,7 +476,7 @@
           </li>
 
           <li>
-            <a href="#" target="_blank"> GitHub </a>
+            <a href="https://github.com/manuysys/CANSAT" target="_blank" rel="noopener noreferrer"> GitHub </a>
           </li>
         </ul>
       </nav>

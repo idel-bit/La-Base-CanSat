@@ -10,7 +10,7 @@
 
     <meta
       name="description"
-      content="Seguí los avances técnicos del CanSat de La Base: diseño, sensores, telemetría, estructura, programación, pruebas e integración para CONAE 2026."
+      content="Seguí el desarrollo del CanSat de La Base: sensor BME280, telemetría LoRa, análisis de imágenes con IA, diseño del paracaídas y pruebas de descenso."
     />
 
     <meta
@@ -29,7 +29,7 @@
     />
     <meta
       property="og:description"
-      content="Diseño, sensores, telemetría y pruebas del satélite CanSat del equipo La Base."
+      content="Construcción del CanSat de La Base: sensor BME280, telemetría LoRa, análisis de imágenes con IA, paracaídas y primeras pruebas."
     />
     <meta
       property="og:url"
@@ -124,11 +124,12 @@
       <!-- INTRODUCCIÓN -->
 
       <section class="introduccion-avances">
-        <h1>Avances del proyecto</h1>
+        <h1>Del diseño a las pruebas</h1>
 
         <p>
-          Seguimos el desarrollo de nuestro CanSat desde las primeras etapas de
-          la competencia hasta las pruebas y preparación para la misión.
+          Clasificamos segundos en la etapa de diseño y pasamos a trabajar con
+          el kit: hoy integramos electrónica, telemetría, análisis de imágenes
+          y un sistema de descenso que ya empezamos a probar.
         </p>
       </section>
 
@@ -164,9 +165,9 @@
                 data-bs-parent="#accordionAvances"
               >
                 <div class="accordion-body">
-                  Durante la primera etapa nos capacitamos sobre los conceptos
-                  fundamentales necesarios para comenzar a desarrollar el
-                  proyecto.
+                  Diseñamos la propuesta técnica y definimos una misión
+                  primaria de sondeo atmosférico y una misión secundaria basada
+                  en imágenes del terreno.
                 </div>
               </div>
             </div>
@@ -194,8 +195,9 @@
                 data-bs-parent="#accordionAvances"
               >
                 <div class="accordion-body">
-                  Desarrollamos nuestra propuesta y avanzamos en la definición
-                  de la misión y de los sistemas que formarían parte del CanSat.
+                  Entregamos el Documento Preliminar de Diseño en julio. El 4
+                  de agosto se anunció que clasificamos segundos, con 182,5
+                  puntos, entre 120 propuestas evaluadas.
                 </div>
               </div>
             </div>
@@ -223,9 +225,9 @@
                 data-bs-parent="#accordionAvances"
               >
                 <div class="accordion-body">
-                  Nuestro equipo logró clasificarse para continuar en la
-                  competencia y obtuvo el segundo puesto durante la etapa
-                  correspondiente.
+                  De 257 equipos inscriptos, 120 presentaron una propuesta y
+                  fueron evaluados. El resultado nos permitió avanzar a la
+                  etapa de construcción.
                 </div>
               </div>
             </div>
@@ -253,9 +255,9 @@
                 data-bs-parent="#accordionAvances"
               >
                 <div class="accordion-body">
-                  Con la llegada del kit comenzamos el desarrollo físico y
-                  electrónico del CanSat y la integración de sus diferentes
-                  sistemas.
+                  Recibimos el kit de CONAE y empezamos a conectar sensores y
+                  módulos LoRa. También desarrollamos y probamos un modelo de
+                  análisis de imágenes con datos simulados.
                 </div>
               </div>
             </div>
@@ -271,8 +273,8 @@
               <div>
                 <h3>Capacitación</h3>
                 <p>
-                  Incorporamos los conceptos fundamentales para comenzar a
-                  desarrollar el proyecto.
+                  Trabajamos la propuesta, los cálculos y el diseño preliminar
+                  antes de pasar a la construcción.
                 </p>
               </div>
             </div>
@@ -284,8 +286,8 @@
               <div>
                 <h3>Propuesta y misión</h3>
                 <p>
-                  Definimos la misión y los sistemas que formarían parte del
-                  CanSat.
+                  La propuesta obtuvo 182,5 puntos y el segundo puesto entre
+                  los 120 equipos evaluados.
                 </p>
               </div>
             </div>
@@ -297,8 +299,8 @@
               <div>
                 <h3>Seguimos en competencia</h3>
                 <p>
-                  El equipo se clasificó para continuar y obtuvo el segundo
-                  puesto en esta etapa.
+                  La selección nos permitió continuar el certamen y comenzar a
+                  trabajar con el hardware del kit.
                 </p>
               </div>
             </div>
@@ -310,8 +312,8 @@
               <div>
                 <h3>Integración del CanSat</h3>
                 <p>
-                  Con el kit, comenzamos el desarrollo físico y electrónico y la
-                  integración de los sistemas.
+                  Montamos electrónica, probamos telemetría y confeccionamos
+                  un prototipo de paracaídas para ensayar el descenso.
                 </p>
               </div>
             </div>
@@ -326,9 +328,22 @@
 
         <article data-aos="zoom-in" data-aos-duration="500">
           <p>
-            Trabajamos en la selección, integración y programación de los
-            sensores necesarios para obtener información durante la misión.
+            La misión primaria mide presión atmosférica y temperatura con un
+            sensor BME280. Las primeras lecturas no coincidían con los valores
+            esperados, así que el equipo consiguió otro sensor para continuar
+            las pruebas. También recibimos una Raspberry Pi Zero W y la cámara
+            Raspberry Pi AI Camera para la misión secundaria.
           </p>
+          <div class="galeria-evidencia">
+            <figure>
+              <img src="../assets/img/BME.jpeg" alt="Prueba del sensor BME280 conectado al sistema CanSat" loading="lazy" />
+              <figcaption>Pruebas iniciales del BME280.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/Raspberry.jpeg" alt="Placa Raspberry utilizada en las pruebas de la misión secundaria" loading="lazy" />
+              <figcaption>Hardware para procesar y guardar imágenes.</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
 
@@ -339,10 +354,18 @@
 
         <article>
           <p>
-            El sistema de telemetría permite transmitir información desde el
-            CanSat hacia la estación terrestre durante el desarrollo de la
-            misión.
+            Los módulos LoRa V3.2 transmiten datos del CanSat a la estación
+            terrestre. En agosto probamos un enlace entre dos módulos y
+            verificamos que podían enviarse y recibirse información.
           </p>
+          <figure class="evidencia-destacada">
+            <img src="../assets/img/esp32%20rx%20y%20tx.jpeg" alt="Dos módulos electrónicos preparados para probar transmisión y recepción LoRa" loading="lazy" />
+            <figcaption>Prueba de transmisión y recepción entre módulos.</figcaption>
+          </figure>
+          <figure class="evidencia-destacada">
+            <img src="../assets/img/ESP32.jpeg" alt="Placa ESP32 utilizada para el sistema de comunicación del CanSat" loading="lazy" />
+            <figcaption>Placa electrónica del sistema de telemetría.</figcaption>
+          </figure>
         </article>
       </section>
 
@@ -353,10 +376,37 @@
 
         <article>
           <p>
-            Diseñamos y construimos los elementos físicos necesarios para
-            proteger los componentes y permitir el descenso controlado del
-            CanSat.
+            El equipo diseña una estructura compacta para alojar la electrónica
+            y proteger la cámara. Para el descenso, cortamos y cosemos un
+            paracaídas con ocho suspentes; el 22 de septiembre hicimos un
+            primer lanzamiento de prueba con una carga simulada.
           </p>
+          <div class="galeria-evidencia">
+            <figure>
+              <img src="../assets/img/impresion%203d%20cansat.jpeg" alt="Impresora 3D fabricando una pieza para el prototipo CanSat" loading="lazy" />
+              <figcaption>Fabricación de piezas para el prototipo.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/impresion%203d%20cansat%201.jpeg" alt="Impresora 3D trabajando en una pieza del CanSat" loading="lazy" />
+              <figcaption>Impresión 3D de componentes.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/redise%C3%B1o%20estructura2.jpeg" alt="Modelo digital de una pieza rediseñada para la estructura del CanSat" loading="lazy" />
+              <figcaption>Revisión del diseño de la estructura.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/paracaidas%20dise%C3%B1o%20geogebra.jpeg" alt="Diseño geométrico del paracaídas para el CanSat" loading="lazy" />
+              <figcaption>Diseño y dimensionamiento del paracaídas.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/paracaidas%20corte.jpeg" alt="Tela cortada para confeccionar el paracaídas del CanSat" loading="lazy" />
+              <figcaption>Corte de tela para el prototipo.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/prototipo%20de%20paracaidas%20costura.jpeg" alt="Costura de tela para el prototipo de paracaídas" loading="lazy" />
+              <figcaption>Confección del prototipo de descenso.</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
 
@@ -367,10 +417,29 @@
 
         <article>
           <p>
-            Desarrollamos el software necesario para controlar los sistemas,
-            adquirir datos, procesarlos y gestionar las comunicaciones durante
-            la misión.
+            La demo de la misión secundaria usa segmentación semántica para
+            clasificar el terreno y YOLO para detectar personas y vehículos.
+            Las pruebas actuales combinan imágenes con datos de sensores
+            simulados; todavía estamos preparando la integración en vuelo.
           </p>
+          <div class="galeria-evidencia">
+            <figure>
+              <img src="../assets/img/pruebas%20de%20imagenes%20IA.jpeg" alt="Resultado de una prueba de análisis y segmentación de imágenes del terreno" loading="lazy" />
+              <figcaption>Prueba de análisis de imágenes.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pruebas%20de%20imagenes%20IA3.jpeg" alt="Mapa de terreno clasificado por colores durante una prueba de inteligencia artificial" loading="lazy" />
+              <figcaption>Clasificación visual del terreno.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pruebas%20de%20imagenes%20IA2.jpeg" alt="Imagen urbana segmentada por categorías durante una prueba de análisis con IA" loading="lazy" />
+              <figcaption>Prueba de segmentación en una zona urbana.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pruebas%20de%20imagenes%20IA4.jpeg" alt="Vista de otra imagen usada para probar el análisis del terreno" loading="lazy" />
+              <figcaption>Imágenes de prueba de la misión secundaria.</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
 
@@ -381,9 +450,18 @@
 
         <article>
           <p>
-            Realizamos diferentes pruebas para verificar el funcionamiento de
-            los sistemas y detectar posibles problemas antes de la misión.
+            El primer ensayo del paracaídas se hizo desde la terraza del
+            colegio con una lata como carga de prueba. La prueba sirve para
+            observar el descenso y revisar los suspentes; todavía quedan ajustes
+            antes de validar el sistema.
           </p>
+          <figure class="video-evidencia">
+            <video controls preload="metadata" playsinline>
+              <source src="../assets/videos/prueba%20paracaidas.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+            </video>
+            <figcaption>Primer ensayo de descenso del prototipo de paracaídas.</figcaption>
+          </figure>
         </article>
       </section>
     </main>
@@ -392,15 +470,15 @@
       <nav>
         <ul>
           <li>
-            <a href="#" target="_blank"> Instagram </a>
+            <a href="https://www.instagram.com/labase.cansat/" target="_blank" rel="noopener noreferrer"> Instagram </a>
           </li>
 
           <li>
-            <a href="#" target="_blank"> LinkedIn </a>
+            <a href="https://www.youtube.com/@LaBase-CanSat" target="_blank" rel="noopener noreferrer"> YouTube </a>
           </li>
 
           <li>
-            <a href="#" target="_blank"> GitHub </a>
+            <a href="https://github.com/manuysys/CANSAT" target="_blank" rel="noopener noreferrer"> GitHub </a>
           </li>
         </ul>
       </nav>

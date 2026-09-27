@@ -300,7 +300,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50cqw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/base cansat.jpg") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE AVANCES ==================== */
@@ -309,7 +309,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50cqw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/impresion%203d%20cansat%201.jpeg") center/cover no-repeat;
 }
 
 /* ==================== PORTADA DE COMUNIDAD ==================== */
@@ -318,7 +318,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50cqw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/pruebas%20de%20imagenes%20IA3.jpeg") center/cover no-repeat;
 }
 
 /* Styles for the community landing page */
@@ -329,7 +329,7 @@ section li::before {
   min-height: calc(100svh - 84px);
   margin-left: calc(50% - 50cqw);
   margin-top: 0px;
-  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/equipo-planificando-mision-cansat.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 75%, #070707 100%), linear-gradient(90deg, rgba(42, 44, 45, 0.86), rgba(42, 44, 45, 0.55) 55%, rgba(42, 44, 45, 0.25)), url("../assets/img/esp32%20rx%20y%20tx.jpeg") center/cover no-repeat;
 }
 
 /* ==================== BOTONES ==================== */
@@ -379,6 +379,8 @@ section li::before {
 .que-es-cansat,
 .mision,
 .sensorica,
+.telemetria,
+.programacion,
 .estructura,
 .pruebas,
 .recursos,
@@ -395,9 +397,6 @@ section li::before {
 .noticias article,
 .publicaciones article,
 .equipo article,
-.telemetria article,
-.programacion article,
-.foro article,
 .redes article {
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -427,9 +426,6 @@ section li::before {
 .noticias article,
 .publicaciones article,
 .equipo article,
-.telemetria article,
-.programacion article,
-.foro article,
 .redes article {
   padding: 1.5rem;
   border: 2px solid #3F3F3F;
@@ -453,40 +449,44 @@ section li::before {
   transform: translateY(-3px);
 }
 
-/* ==================== GRID PRINCIPAL ==================== */
-/*
-Mobile First:
-
-El título y el contenido se organizan
-en una sola columna.
-
-Desktop:
-
-Se utilizan dos columnas mediante
-grid-template-areas.
-*/
-.telemetria,
-.programacion,
-.foro {
+/* ==================== EVIDENCIA DEL PROYECTO ==================== */
+.galeria-evidencia {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "titulo" "contenido";
-  align-items: center;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.telemetria h2,
-.programacion h2,
-.foro h2 {
-  grid-area: titulo;
-  margin: 0;
+.galeria-evidencia figure,
+.evidencia-destacada,
+.video-evidencia {
+  min-width: 0;
+  margin: 1.5rem 0 0;
 }
 
-.telemetria article,
-.programacion article,
-.foro article {
-  grid-area: contenido;
+.galeria-evidencia img,
+.evidencia-destacada img,
+.video-evidencia video {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: #202223;
+}
+
+.video-evidencia video {
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+
+.galeria-evidencia figcaption,
+.evidencia-destacada figcaption,
+.video-evidencia figcaption {
+  margin-top: 0.5rem;
+  color: #C7C7C7;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 /* ==================== OBJETIVOS Y RECURSOS ==================== */
@@ -953,24 +953,6 @@ El diseño base sigue siendo Mobile First.
   .equipo {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-  }
-  /* ==================== GRID PRINCIPAL ==================== */
-  /*
-  Desktop:
-
-  El título ocupa la primera columna.
-  El contenido ocupa la segunda columna.
-
-  Se utiliza grid-template-areas para
-  definir explícitamente la distribución.
-  */
-  .telemetria,
-  .programacion,
-  .foro {
-    grid-template-columns: 0.75fr 1.25fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "titulo contenido";
-    gap: 2rem;
   }
   /* ==================== OBJETIVOS ==================== */
   .objetivos {
