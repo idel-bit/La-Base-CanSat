@@ -59,6 +59,64 @@
 
 }
 
+.integrantes-grid {
+
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+
+}
+
+.equipo .integrante {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-height: 8rem;
+
+    padding: 1.25rem;
+
+}
+
+.integrante__rol {
+
+    margin-bottom: 0.4rem;
+
+    color: $dorado;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.equipo .integrante h3 {
+
+    margin: 0;
+
+    overflow-wrap: anywhere;
+
+    font-size: 1rem;
+
+}
+
+.equipo .equipo-colaboracion {
+
+    grid-column: 1 / -1;
+
+}
+
 
 .proyecto > h2,
 .etapas > h2,
@@ -76,32 +134,21 @@
 .etapas article,
 .noticias article,
 .publicaciones article,
-.equipo article,
-.redes article {
+.equipo article {
 
     padding: 1.5rem;
 
-    border: 2px solid $detalle;
-
-    border-radius: $radio;
-    
-
     background: $fondo-tarjeta-translucido;
-
-    backdrop-filter: blur(15px);
 
     border: 1px solid $blanco-translucido-medio;
 
     -webkit-backdrop-filter: blur(9px);
 
-    border-radius: 18px;
+    border-radius: $radio;
 
     box-shadow: 0 8px 30px $sombra-tarjeta;
 
     color: $blanco;
-
-    box-shadow:
-        0 16px 36px $sombra-tarjeta-suave;
 
     @extend %tarjeta-interactiva;
 
@@ -143,6 +190,14 @@
     min-width: 0;
 
     margin: 1.5rem 0 0;
+
+}
+
+.galeria-evidencia figure {
+
+    width: min(100%, 20rem);
+
+    justify-self: center;
 
 }
 

@@ -1,23 +1,17 @@
 @use "variables" as *;
 
-// Fondo compartido por las portadas de las cinco páginas.
-@mixin fondo-portada($imagen: '../assets/img/equipo-planificando-mision-cansat.png', $posicion: center) {
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent 75%,
-            $fondo 100%
-        ),
-
+// La imagen es obligatoria y su ruta se resuelve desde styles/styles.css.
+@mixin fondo-portada($imagen, $posicion: center, $tamano: cover) {
+    background-image:
+        linear-gradient(to bottom, transparent 75%, $fondo 100%),
         linear-gradient(
             90deg,
             $overlay-portada-fuerte,
             $overlay-portada-medio 55%,
             $overlay-portada-suave
         ),
-
-        url($imagen)
-        #{$posicion} / cover no-repeat;
-
+        url($imagen);
+    background-position: center, center, $posicion;
+    background-size: cover, cover, $tamano;
+    background-repeat: no-repeat;
 }

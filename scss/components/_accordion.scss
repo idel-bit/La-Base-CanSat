@@ -46,8 +46,8 @@
 
 .etapas-contenido:has(#headingEtapa1 .accordion-button[aria-expanded="true"]) .etapa-visual--1,
 .etapas-contenido:has(#headingEtapa2 .accordion-button[aria-expanded="true"]) .etapa-visual--2,
-.etapas-contenido:has(#headingClasificacion .accordion-button[aria-expanded="true"]) .etapa-visual--clasificacion,
-.etapas-contenido:has(#headingDesarrollo .accordion-button[aria-expanded="true"]) .etapa-visual--desarrollo {
+.etapas-contenido:has(#headingEtapa3 .accordion-button[aria-expanded="true"]) .etapa-visual--3,
+.etapas-contenido:has(#headingEtapa4 .accordion-button[aria-expanded="true"]) .etapa-visual--4 {
 
     display: flex;
 
@@ -107,22 +107,22 @@
 
 .accordion {
 
-    --bs-accordion-bg: $tarjeta;
+    --bs-accordion-bg: #{$tarjeta};
 
-    --bs-accordion-color: $blanco;
+    --bs-accordion-color: #{$blanco};
 
-    --bs-accordion-border-color: $detalle;
+    --bs-accordion-border-color: #{$detalle};
 
-    --bs-accordion-btn-color: $blanco;
+    --bs-accordion-btn-color: #{$blanco};
 
-    --bs-accordion-btn-bg: $tarjeta;
+    --bs-accordion-btn-bg: #{$tarjeta};
 
-    --bs-accordion-active-color: $celeste;
+    --bs-accordion-active-color: #{$celeste};
 
-    --bs-accordion-active-bg: $oscuro;
+    --bs-accordion-active-bg: #{$oscuro};
 
     --bs-accordion-btn-focus-box-shadow:
-        0 0 0 3px $foco-celeste;
+        0 0 0 3px #{$foco-celeste};
 
 }
 
@@ -199,4 +199,11 @@
 
     line-height: 1.7;
 
+}
+
+.avance-clave {
+    margin: 1rem 0 0;
+    padding-left: 1rem;
+    border-left: 2px solid $dorado;
+    color: $texto-secundario;
 }

@@ -32,6 +32,12 @@ El diseño continúa siendo Mobile First.
 
     }
 
+    .integrantes-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
 
     /* ==================== OBJETIVOS ==================== */
 
@@ -41,14 +47,6 @@ El diseño continúa siendo Mobile First.
 
     }
 
-
-    /* ==================== CARRUSEL ==================== */
-
-    #carouselCanSat .carousel-item img {
-
-        height: 400px;
-
-    }
 
 }
 
@@ -131,7 +129,6 @@ El diseño base sigue siendo Mobile First.
 
     }
 
-
     /* ==================== OBJETIVOS ==================== */
 
     .objetivos {
@@ -157,18 +154,13 @@ El diseño base sigue siendo Mobile First.
     }
 
 
-    /* ==================== CARRUSEL ==================== */
+}
 
-    .galeria {
+@media (min-width: 1200px) {
 
-        padding: 82px 0;
+    .integrantes-grid {
 
-    }
-
-
-    #carouselCanSat .carousel-item img {
-
-        height: 500px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
 
     }
 

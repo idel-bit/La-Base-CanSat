@@ -1,14 +1,10 @@
 /* ==================== FUENTES ==================== */
 
-/* Nulkshock: títulos. Montserrat: texto general y subtítulos. */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-
+/* Nulkshock conserva la identidad de los títulos; Montserrat se carga en el HTML. */
 @font-face {
-
     font-family: "Nulkshock";
-
     src: url("../assets/fonts/nulshock-bold.otf") format("opentype");
-
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
 }

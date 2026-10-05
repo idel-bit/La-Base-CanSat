@@ -39,7 +39,6 @@ El sitio presenta información sobre el proyecto, sus objetivos, avances realiza
 - Bootstrap 5.3.3
 - Flexbox
 - CSS Grid
-- `grid-template-areas`
 - Media Queries
 - Git
 - GitHub
@@ -96,15 +95,17 @@ La Base CanSat/
 
 El CSS que carga el sitio se genera desde `scss/main.scss`; no se edita a mano.
 
-```bash
+```powershell
 npm install
-npm run build:css
+npm.cmd run build:css
 ```
+
+En otras terminales se puede usar `npm run build:css`.
 
 Para recompilar automáticamente mientras se trabaja:
 
-```bash
-npm run watch:css
+```powershell
+npm.cmd run watch:css
 ```
 
 ---
@@ -153,7 +154,7 @@ El sitio cuenta con diferentes puntos de quiebre para adaptar la distribución d
 - **1024px**
 - **1440px**
 
-La estructura se adapta progresivamente según el tamaño de pantalla, reorganizando los elementos y las áreas de la grilla cuando es necesario.
+La estructura se adapta progresivamente según el tamaño de pantalla mediante CSS Grid, Flexbox y media queries.
 
 ## 🔎 SEO y accesibilidad
 
